@@ -2,6 +2,7 @@ package spacegame;
 import java.awt.Color; 
 import java.awt.Container;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,9 +15,9 @@ import javax.swing.JTextArea;
 
 import spacegame.ClickEvents.*;
 
-public class GameMenu {
+public class GameMenu extends JFrame{
 	
-	JFrame window;
+	static JFrame window;
 	static Container con;
 	static JPanel titleNamePanel, startMenuButtonPanel, mainTextPanel;
 	JLabel titleNameLabel;
@@ -91,7 +92,10 @@ public class GameMenu {
 		
 		con.add(titleNamePanel);
 		con.add(startMenuButtonPanel);
-	}	
+	}
+
+
+
 	
 }
 

@@ -3,6 +3,8 @@ import java.awt.Color;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
@@ -12,7 +14,12 @@ public class ClickEvents extends GameMenu {
 	
 	public static class TitleScreenHandler implements ActionListener{
 		public void actionPerformed(ActionEvent event) {
-			GameScreen.gameScreen();
+			try {
+				GameScreen.gameScreen();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	

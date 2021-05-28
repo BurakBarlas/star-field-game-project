@@ -1,35 +1,71 @@
 package spacegame;
 import java.awt.Color;
+import spacegame.GameLayout;
+import spacegame.GamePanel;
 
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Paint;
+import java.awt.Rectangle;
+import java.awt.Shape;
+
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+
+import javax.imageio.ImageIO;
+import javax.imageio.stream.FileImageInputStream;
+import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.text.AttributedCharacterIterator;
   
 public class GameScreen extends GameMenu {
 	
+	private BufferedImage space_png;
+	static JPanel testpanel;
 	
-	public static void gameScreen() {
+	
+	
+	
+	public static void gameScreen() throws FileNotFoundException, IOException{
 		
-		titleNamePanel.setVisible(false);
-		startMenuButtonPanel.setVisible(false);
+//		titleNamePanel.setVisible(false);
+//		startMenuButtonPanel.setVisible(false);
+//		con.setVisible(false);
 		
-		mainTextPanel = new JPanel();
-		mainTextPanel.setBounds(100, 100, 600, 250);
-		mainTextPanel.setBackground(Color.blue);
-		con.add(mainTextPanel);
+		GameLayout game_interface = new GameLayout("Star Field");
 		
-		mainTextArea = new JTextArea("This is the main text area. This game is going to be great. I'm sure of it!");
-		mainTextArea.setBounds(100, 100, 600, 250);
-		mainTextArea.setBackground(Color.black);
-		mainTextArea.setForeground(Color.white);
-		mainTextArea.setFont(normalFont);
-		mainTextArea.setLineWrap(true);
-		mainTextPanel.add(mainTextArea);
+		game_interface.setResizable(false);
+		game_interface.setFocusable(false);
 		
-//		choiceButtonPanel = new JPanel();
+		game_interface.setSize(1000,800);
+		
+		game_interface.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		GamePanel game_panel = new GamePanel();
+		
+		game_panel.requestFocus();		
+		game_panel.addKeyListener(game_panel);		
+		game_panel.setFocusable(true);		
+		game_panel.setFocusTraversalKeysEnabled(false);
+		
+		game_interface.add(game_panel);
+		game_interface.setVisible(true);
+		
+	    
+		
+		window.setVisible(false);
+//		JPanel choiceButtonPanel = new JPanel();
 //		choiceButtonPanel.setBounds(250, 350, 300, 150);
 //		choiceButtonPanel.setBackground(Color.red);
-//		choiceButtonPanel.setLayout(new GridLayout(4,1));
 //		con.add(choiceButtonPanel);
+//		choiceButtonPanel.setLayout(new GridLayout(4,1));
 		
 	}
 }
