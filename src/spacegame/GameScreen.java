@@ -1,34 +1,40 @@
 package spacegame;
-import java.awt.Color;
-import spacegame.GameLayout;
-import spacegame.GamePanel;
-
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.GridLayout;
-import java.awt.Image;
-import java.awt.Paint;
-import java.awt.Rectangle;
-import java.awt.Shape;
+//import java.awt.Color;
+//
+//import spacegame.GameLayout;
+//import spacegame.GamePanel;
+//
+//import java.awt.Font;
+//import java.awt.FontMetrics;
+//import java.awt.Graphics;
+//import java.awt.GridLayout;
+//import java.awt.Image;
+//import java.awt.Paint;
+//import java.awt.Rectangle;
+//import java.awt.Shape;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-
-import javax.imageio.ImageIO;
-import javax.imageio.stream.FileImageInputStream;
-import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
-import java.io.File;
+//import javax.swing.JPanel;
+//import javax.swing.JTextArea;
+//
+//import javax.imageio.ImageIO;
+//import javax.imageio.stream.FileImageInputStream;
+//import java.awt.image.BufferedImage;
+//import java.awt.image.ImageObserver;
+//import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.AttributedCharacterIterator;
+//import java.text.AttributedCharacterIterator;
   
 public class GameScreen extends GameMenu {
 	
-	private BufferedImage space_png;
-	static JPanel testpanel;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	
 	
@@ -66,6 +72,10 @@ public class GameScreen extends GameMenu {
 //		choiceButtonPanel.setBackground(Color.red);
 //		con.add(choiceButtonPanel);
 //		choiceButtonPanel.setLayout(new GridLayout(4,1));
+		
+	}
+	
+	public void keyPressed(KeyEvent e) {
 		
 	}
 }

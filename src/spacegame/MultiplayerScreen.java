@@ -1,11 +1,17 @@
 package spacegame;
 import java.awt.Color;
 
+
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
+//import javax.swing.JTextArea;
 
 public class MultiplayerScreen extends GameMenu{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public static void multiplayerScreen() {
 		titleNamePanel.setVisible(false);
 		startMenuButtonPanel.setVisible(false);

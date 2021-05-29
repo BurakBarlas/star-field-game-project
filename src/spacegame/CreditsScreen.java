@@ -6,6 +6,11 @@ import javax.swing.JTextArea;
 
 public class CreditsScreen extends GameMenu{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public static void creditsScreen() {
 		titleNamePanel.setVisible(false);
 		startMenuButtonPanel.setVisible(false);

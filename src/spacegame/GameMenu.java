@@ -1,10 +1,11 @@
 package spacegame;
 import java.awt.Color; 
+
 import java.awt.Container;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+//import java.awt.Graphics;
+//import java.awt.event.ActionEvent;
+//import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -17,6 +18,10 @@ import spacegame.ClickEvents.*;
 
 public class GameMenu extends JFrame{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	static JFrame window;
 	static Container con;
 	static JPanel titleNamePanel, startMenuButtonPanel, mainTextPanel;
